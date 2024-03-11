@@ -5,10 +5,8 @@ The objective is to explore suitable digital product offerings for a fitness stu
 
 ![image](https://github.com/fangoaish/Python__Digital-Fitness-Product-Strategy-for-Singaporean-Market-Positioning/assets/51399519/05d042e9-2550-4f8d-a798-79b1b20a49af)
 
-
 ## Business Objectives
 Utilize data from Google Trends and YouTube keyword searches to identify competitor strengths, gauge demand, and develop unique digital fitness products and services tailored to Singaporean users' preferences.
-
 
 ## Data Sources
 There were four fundamental datasets leveraged for this analysis:
@@ -17,6 +15,7 @@ There were four fundamental datasets leveraged for this analysis:
 - workout_global.csv
 - geo_three_keywords.csv
 
+  
 ## Data Preparation
 - Found in the Datasets folder, all datasets were first inspected and then loaded into various Pandas DataFrames in the appropriate sections of the code.
 - During the inspection, various corrupt and missing aspects of the data were identified.
@@ -71,13 +70,15 @@ Gain comprehensive insights into global workout demand, popular fitness keywords
 - Investigate the top three fitness keywords that garnered the highest interest during different time intervals.
 - Assess the distribution of interest across these keywords in the Philippines and its neighboring countries, including those in the Middle East.
 - Determine the most popular workout types in the Philippines and Singapore.
-     
+
+   
 ### **1. Evaluate the Global Demand for Workouts From Mid-March 2018 to Mid-March 2023**
 - Why do I want to know?
     - By assessing this demand, we can gain insights into trends, preferences, and potential market opportunities.
 - So what?  
     - This allows us to adapt our offerings, develop targeted marketing strategies, and allocate resources effectively to meet consumer needs and capitalize on emerging trends.
-     
+
+
 ### **Findings:**
 1. Interest in workouts appears to be seasonal.
 2. From mid-March 2018 to mid-March 2023, there is a peak in April 2020. We will investigate the three most popular keywords that generated the highest interest during this peak. 
@@ -86,10 +87,12 @@ Gain comprehensive insights into global workout demand, popular fitness keywords
 
 ![highest demand for fitness by month and year](https://github.com/fangoaish/Python__Digital-Fitness-Product-Strategy-for-Singaporean-Market-Positioning/assets/51399519/d34f0faf-0c11-417d-8d79-0f20111a066c)
 
+
 ### **Recommendations:** 
 - Use the insights gained to develop new fitness products and services tailored to meet the demands of the global market.
 - Create targeted marketing campaigns aimed at regions or demographics with high demand for workouts, maximizing the effectiveness of marketing efforts.
 - Identify regions or countries with growing demand for workouts and explore expansion opportunities to tap into these markets.
+
 
 
 ### **2. Which One of the Three Most Popular Keywords Generated the Highest Interest During the Peak of COVID in 2020 and Onwards?**
@@ -111,12 +114,16 @@ During the peak of the COVID-19 pandemic in 2020, the most popular keywords glob
 
 ![Top 20 countries with highest interest in workout](https://github.com/fangoaish/Python__Digital-Fitness-Product-Strategy-for-Singaporean-Market-Positioning/assets/51399519/d278a13f-02d8-43dc-9e90-18e35691f2c7)
 
+
 ### **Recommendations**
 - Adapt offerings for gym settings, enhancing the gym workout experience with digital innovations.
 - Offer diverse digital fitness options, catering to both home and gym-based exercises.
 - Monitor trends closely, adjusting strategies promptly to maintain competitiveness.
 
+
+
 ### **3. Assess the distribution of interest across these keywords in the Philippines and its neighboring countries, including those in the Middle East**
+
 
 ### **Findings:**
 The data shows the distribution of interest across different fitness-related keywords in the Philippines and its neighboring countries, including those in the Middle East. The keywords include "home workout," "gym workout," and "home gym." The top keywords in terms of interest are "home workout" and "gym workout," with "home gym" receiving relatively lower interest.
@@ -127,8 +134,10 @@ The data shows the distribution of interest across different fitness-related key
 Given the varying interests across countries, businesses and fitness-related industries can tailor their marketing strategies accordingly. For example, they can emphasize home workout solutions in countries where it's more popular and focus on gym-related services or products in regions where gym workouts are preferred.
 
 
+
+
 ### 4. What are the most popular workout types in the Philippines and Singapore?
-- Why I want to know?
+- Why do I want to know?
     - Understanding YouTube keyword searches for the Philippines and Singapore helps tailor digital fitness products and marketing strategies to engage with local audiences and identify market trends for strategic decisions.
 - So what?
     - Optimize SEO to improve visibility in search results
@@ -140,10 +149,13 @@ Over the past 5 years, the keyword _**'workout'**_ has played the dominant role 
 
 ![Yotuube sports keyword searches in the philippines over the past 5 years](https://github.com/fangoaish/Python__Digital-Fitness-Product-Strategy-for-Singaporean-Market-Positioning/assets/51399519/8153ce46-456e-472f-9f24-d90f218e1e78)
 
+
 ### **Recommendations**
 - Customize content and campaigns based on local keyword trends.
 - Develop products aligned with specific market interests.
 - Enhance competitiveness by refining offerings based on keyword insights.
+
+
 
 ## Challenges
 ```ruby
@@ -189,9 +201,13 @@ def read_geo(filepath, multi=False):
     return file
 ```
 
+
+
 ## Limitations
 - Quality of Datasets: The reliability of the findings and the effectiveness of proposed recommendations heavily rely on the quality and completeness of the datasets provided. Incomplete or inaccurate data could lead to biased analysis and misleading conclusions.
 - Dependency on External Tools: The analysis involves reliance on external tools such as Google Trends and Youtube Keyword Searches. Any limitations or inaccuracies in these tools could affect the accuracy of the analysis results.
+
+
 
 ## References
 - [DataCamp](https://www.datacamp.com/)
