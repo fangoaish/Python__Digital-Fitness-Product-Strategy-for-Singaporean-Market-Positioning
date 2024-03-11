@@ -21,6 +21,48 @@ There were four fundamental datasets leveraged for this analysis:
 - Found in the Datasets folder, all datasets were first inspected and then loaded into various Pandas DataFrames in the appropriate sections of the code.
 - During the inspection, various corrupt and missing aspects of the data were identified.
 - Before loading any file into DataFrames, the code was written to pre-emptively handle all problematic parts in the datasets.
+```ruby
+  def read_file(filepath, plot = True):
+    """
+    Read a CSV file from a given filepath, convert it into a pandas DataFrame,
+    and return a processed DataFrame with three columns: 'week', 'region', and 'interest'. Generate a line plot using Seaborn to visualize the data. This corresponds to the first graphic (time series) returned by trends.google.com. 
+    """
+    file = pd.read_csv(filepath, header=1) #Based upon all the csv files at hand, as our actual column names are on the second row, we're using header=1
+    df = file.set_index('Week').stack().reset_index()
+    df.columns = ['week','region','interest']
+    df['week'] = pd.to_datetime(df['week'])
+    plt.figure(figsize=(8,3))
+    df = df[df['interest']!="<1"]
+    df['interest'] = df['interest'].astype(float)
+
+    if plot:
+        sns.lineplot(data = df, x= 'week', y= 'interest',hue='region')
+    return df
+
+def read_geo(filepath, multi=False):
+    """
+    Read a CSV file from a given filepath, convert it into a pandas DataFrame,
+    and return a processed DataFrame with two columns: 'country' and 'interest'. Generate a bar plot using Seaborn to visualize the data. This corresponds to the second graphic returned by trends.google.com. Use multi=False if only one keyword is being analyzed, and multi=True if more than one keyword is being analyzed.
+    """
+    file = pd.read_csv(filepath, header=1)
+
+    if not multi:
+        file.columns = ['country', 'interest']
+        plt.figure(figsize=(8,4))
+        colors = sns.color_palette("pastel")
+        sns.barplot(data = file.dropna().iloc[:20,:], y = 'country', x='interest', palette=colors)
+
+    if multi:
+        plt.figure(figsize=(10,14))
+        colors = sns.color_palette("pastel")
+        file = file.set_index('Country').stack().reset_index()
+        file.columns = ['country','category','interest']
+        file['interest'] = pd.to_numeric(file['interest'].apply(lambda x: x[:-1]))
+        sns.barplot(data=file.dropna(), y = 'country', x='interest', hue='category', palette=colors)
+
+    # file = file.sort_values(ascending=False,by='interest')
+    return file
+```
 
 ## Exploratory Data Analysis
 Gain comprehensive insights into global workout demand, popular fitness keywords, regional interest splits, and preferred workout types in the Philippines and Singapore. These insights will inform strategic decisions regarding digital product offerings and market positioning for the fitness studio in Singapore.
