@@ -71,113 +71,79 @@ Gain comprehensive insights into global workout demand, popular fitness keywords
 - Investigate the top three fitness keywords that garnered the highest interest during different time intervals.
 - Assess the distribution of interest across these keywords in the Philippines and its neighboring countries, including those in the Middle East.
 - Determine the most popular workout types in the Philippines and Singapore.
-
-### _1) Consumer Preferences_
-- #### **Q:** Does a correlation exist between revenue and reviews?
-    - Why do I want to know? 
-        - Explore the strength of any correlation that may exist between a product's revenue and its reviews
-    - So what?     
-        - Implement initiatives to encourage and incentivize customer reviews, fostering increased engagement and potentially driving higher revenues through positive customer feedback
-    - Measure by?
-        - revenue // reviews
-
-- #### **Q:** Is there an influence on a product's rating and reviews based on the length of its description?
-    -  Why do I want to know?
-        - Explore the potential impact of product description length on customer ratings and reviews, addressing the relationship between product information and consumer perception.
-    - So what?
-        - If positive, highlight product features within the optimal description length to attract and engage customers effectively
-    - Measure by?
-        - description // reviews // rating
      
-### _1) Consumer Preferences - Findings_
-1. A correlation coefficient of 0.65 could be interpreted as either a "good" or "moderate" correlation. Therefore, there is a positive correlation between revenue and reviews, suggesting that products with higher reviews tend to generate higher revenue.
-2. The correlation coefficient of 0.73 indicates the strength and direction of the linear relationship between description length and the average rating.
+### **1. Evaluate the Global Demand for Workouts From Mid-March 2018 to Mid-March 2023**
+- Why do I want to know?
+    - By assessing this demand, we can gain insights into trends, preferences, and potential market opportunities.
+- So what?  
+    - This allows us to adapt our offerings, develop targeted marketing strategies, and allocate resources effectively to meet consumer needs and capitalize on emerging trends.
      
-![Correlation between Revenue and Reviews](https://github.com/fangoaish/Python__Analysis-of-Sportswear-Product-Sales-Adidas-vs.-Nike/assets/51399519/43de922e-bb14-4e04-8ed0-9638154a2c54)
+### **Findings:**
+1. Interest in workouts appears to be seasonal.
+2. From mid-March 2018 to mid-March 2023, there is a peak in April 2020. We will investigate the three most popular keywords that generated the highest interest during this peak. 
 
-![Correlation Between Description Length and Mean Rating](https://github.com/fangoaish/Python__Analysis-of-Sportswear-Product-Sales-Adidas-vs.-Nike/assets/51399519/23ff228c-94d6-49e5-8190-ec332522cdb2)
+![Workout worldwide trend](https://github.com/fangoaish/Python__Digital-Fitness-Product-Strategy-for-Singaporean-Market-Positioning/assets/51399519/7275fdab-9ab1-4ad3-9b40-9b39aead1092)
 
+![highest demand for fitness by month and year](https://github.com/fangoaish/Python__Digital-Fitness-Product-Strategy-for-Singaporean-Market-Positioning/assets/51399519/d34f0faf-0c11-417d-8d79-0f20111a066c)
 
-### _1) Consumer Preferences - Recommendations_
-- Leverage the positive correlation observed between revenue and reviews to enhance marketing strategies, emphasizing the importance of customer reviews in promotional campaigns and product positioning.
-- Consider optimizing product descriptions to a length that resonates well with customers. This could potentially lead to higher average ratings.
-
-
-
-### _2) Product Offerings_
-- #### **Q:** Do Nike and Adidas offer differing discount amounts?
-    - Why do I want to know? 
-        - Aim to investigate and compare the discount strategies employed by Nike and Adidas, providing insights into their promotional approaches.
-    - So what?
-        - Navigate the complexities of differing discount amounts, optimizing their strategies to achieve a balance between attracting customers, maintaining brand value, and sustaining profitable operations
-    - Measure by?
-        - brand // discount
+### **Recommendations:** 
+- Use the insights gained to develop new fitness products and services tailored to meet the demands of the global market.
+- Create targeted marketing campaigns aimed at regions or demographics with high demand for workouts, maximizing the effectiveness of marketing efforts.
+- Identify regions or countries with growing demand for workouts and explore expansion opportunities to tap into these markets.
 
 
-- #### **Q:** What distinguishes the price points between Nike and Adidas products?
-    - Why do I want to know?: 
-        - Focus on understanding the comparative pricing strategies of Nike and Adidas, exploring the differences in their product price points.
-    - So what? 
-        - Analyze how the variations in price points may impact consumer perception, market positioning, and business strategies for Nike and Adidas
-    - Measure by?
-        - brand // listing_price
+### **2. Which One of the Three Most Popular Keywords Generated the Highest Interest During the Peak of COVID in 2020 and Onwards?**
+- Why do I want to know?
+    - Identifying the top-performing keyword during the peak of COVID in 2020 and onwards is crucial for adapting digital products and marketing strategies to meet shifting consumer behaviors.
+
+- So what?
+    - Use ongoing keyword trend analysis to inform future business strategies and optimize offerings.
+    - Tailor products and services to match the interests associated with the top keyword.
+    - Develop relevant content to attract and retain customers.
 
 
-### _2) Product Offerings - Findings_
+### **Findings:**
+During the peak of the COVID-19 pandemic in 2020, the most popular keywords globally were: "home workout," with an interest score of 29.0. In 2022 and 2023, the ranking of the most popular keywords globally shifted, with "gym workout" being the most popular keyword, having an interest score of 18.0. Additionally, the United States is the top country with the highest interest in workouts over the past 5 years.
 
-First, the number of offered discounts by Adidas is **5 times higher** than the ones offered by Nike. Second, both brands offer products in all price categories, but Adidas has a higher number of products in every category compared to Nike. Additionally, it reveals that the _**"Premium" category**_ has the highest average revenue. These findings suggest that Nike and Adidas have distinct price points and the amount of offered discounts for their products, with Adidas offering a higher number of products across price points and potentially generating higher average revenue.
+![three keywords trends infos](https://github.com/fangoaish/Python__Digital-Fitness-Product-Strategy-for-Singaporean-Market-Positioning/assets/51399519/7db8f9e8-8524-4438-a836-7f7026e67125)
 
+![three keywords trends graphic](https://github.com/fangoaish/Python__Digital-Fitness-Product-Strategy-for-Singaporean-Market-Positioning/assets/51399519/aa3be17e-c361-4225-a3a8-d81c3b5f7c49)
 
-![Distribution of Offered Discount Amounts between Adidas and Nike](https://github.com/fangoaish/Python__Analysis-of-Sportswear-Product-Sales-Adidas-vs.-Nike/assets/51399519/0b5bfc01-4bdd-4b17-a874-a0f43df0dced)
+![Top 20 countries with highest interest in workout](https://github.com/fangoaish/Python__Digital-Fitness-Product-Strategy-for-Singaporean-Market-Positioning/assets/51399519/d278a13f-02d8-43dc-9e90-18e35691f2c7)
 
-![Number of Different Products by Price Category between Adidas and Nike](https://github.com/fangoaish/Python__Analysis-of-Sportswear-Product-Sales-Adidas-vs.-Nike/assets/51399519/d0d04744-dfc4-46db-828d-1bb2540aaf8d)
+### **Recommendations**
+- Adapt offerings for gym settings, enhancing the gym workout experience with digital innovations.
+- Offer diverse digital fitness options, catering to both home and gym-based exercises.
+- Monitor trends closely, adjusting strategies promptly to maintain competitiveness.
 
-![Average Revenue by Price Category between Adidas and Nike](https://github.com/fangoaish/Python__Analysis-of-Sportswear-Product-Sales-Adidas-vs.-Nike/assets/51399519/469f76fc-5173-43c1-ada9-843f919c3be6)
+### **3. Assess the distribution of interest across these keywords in the Philippines and its neighboring countries, including those in the Middle East**
 
+### **Findings:**
+The data shows the distribution of interest across different fitness-related keywords in the Philippines and its neighboring countries, including those in the Middle East. The keywords include "home workout," "gym workout," and "home gym." The top keywords in terms of interest are "home workout" and "gym workout," with "home gym" receiving relatively lower interest.
 
-### _2) Product Offerings - Recommendations_
-- Analyze Nike's discount ratio in comparison to Adidas and explore opportunities to optimize discount strategies, ensuring they align with market dynamics while maintaining brand value.
-- Evaluate and diversify the product categories to compete more effectively with Adidas, addressing potential gaps and increasing market share.
+- Regional Variation: There are variations in keyword interest across countries. For instance, _"home workout"_ appears to be more popular in the **Philippines** and **Malaysia**, while _"gym workout"_ is more prevalent in **India** and the **United Arab Emirates**.
 
-
-### _3) Financial Performance_
-- #### **Q:** How do the product categories contribute to the company's revenue? 
-    - Why do I want to know? 
-        - To evaluate the financial performance of different product categories and understand their contribution to overall revenue.
-    - So what?
-        - This information can help in adjusting inventory management strategies based on insights from each product category
-
-- #### **Q:** How does the median revenue differ across product categories?
-    - Why do I want to know? 
-        - To compare the median revenue generated by different categories.
-    - So what?
-        - This comparison can help optimize marketing and sales efforts based on the relative performance of each category
-
-### _3) Financial Performance - Findings_
-
-- Contribution to Company Revenue:
-
-Footwear dominates the company's revenue, accounting for a substantial 84.7% of the total. This suggests a strong market demand for footwear products, indicating a potential area for further investment and strategic focus.
-Clothing, while contributing 15.3%, is notably lower in comparison. It's important to assess the reasons behind this lower contribution and explore opportunities for growth in the clothing segment.
-
-![Total Number of Products Sold by Product Category](https://github.com/fangoaish/Python__Analysis-of-Sportswear-Product-Sales-Adidas-vs.-Nike/assets/51399519/b07af180-98d0-4fa5-a820-8eb875961e82)
+### **Recommendations:**
+Given the varying interests across countries, businesses and fitness-related industries can tailor their marketing strategies accordingly. For example, they can emphasize home workout solutions in countries where it's more popular and focus on gym-related services or products in regions where gym workouts are preferred.
 
 
+### 4. What are the most popular workout types in the Philippines and Singapore?
+- Why I want to know?
+    - Understanding YouTube keyword searches for the Philippines and Singapore helps tailor digital fitness products and marketing strategies to engage with local audiences and identify market trends for strategic decisions.
+- So what?
+    - Optimize SEO to improve visibility in search results
 
+### **Findings**
+Over the past 5 years, the keyword _**'workout'**_ has played the dominant role compared to others in Singapore; whereas, _**'zumba'**_ is the most popular search, followed by the second highest one - _**'workout'**_ in the Philippines.
 
+![Yotuube sports keyword searches in the singapore over the past 5 years](https://github.com/fangoaish/Python__Digital-Fitness-Product-Strategy-for-Singaporean-Market-Positioning/assets/51399519/e9f4014b-373e-4da2-87fb-2f2597f0d188)
 
-- Median Revenue Disparity:
+![Yotuube sports keyword searches in the philippines over the past 5 years](https://github.com/fangoaish/Python__Digital-Fitness-Product-Strategy-for-Singaporean-Market-Positioning/assets/51399519/8153ce46-456e-472f-9f24-d90f218e1e78)
 
-The median revenue for footwear is significantly **four times higher** compared to clothing. This implies that, on average, each sale in the footwear category brings in more revenue compared to the clothing category.
-The wide gap in median revenue raises questions about the pricing strategy, customer preferences, and market positioning for both product categories.
-
-![Comparison of Median Revenue - Footwear vs Clothing](https://github.com/fangoaish/Python__Analysis-of-Sportswear-Product-Sales-Adidas-vs.-Nike/assets/51399519/c058d361-2949-45f0-9da1-aff9a137a02a)
-
-
-### _3) Financial Performance - Recommendations_
-Given that footwear is the primary revenue driver, it is advisable to continue investing in this category. Explore opportunities to expand the footwear product line, introduce new styles, and leverage market trends to maintain or increase its market share.
-
-While clothing contributes less to the overall revenue, it remains a valuable part of the business. Consider strategies to diversify the clothing portfolio, perhaps by introducing new designs, collaborating with influencers or designers, or identifying untapped market segments to increase its market presence.
+### **Recommendations**
+- Customize content and campaigns based on local keyword trends.
+- Develop products aligned with specific market interests.
+- Enhance competitiveness by refining offerings based on keyword insights.
 
 ## Challenges
 The challenge was to determine the proportion of footwear products of both brands from their clothing counterparts without a specific product type column. Initially, I generated a keyword string to filter relevant rows from our primary DataFrame. Subsequently, I established a counter DataFrame to preserve data whose product IDs are absent from our initial subset, facilitating the differentiation between the two categories of sportswear.
