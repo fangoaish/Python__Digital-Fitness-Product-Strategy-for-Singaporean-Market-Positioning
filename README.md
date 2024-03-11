@@ -146,28 +146,53 @@ Over the past 5 years, the keyword _**'workout'**_ has played the dominant role 
 - Enhance competitiveness by refining offerings based on keyword insights.
 
 ## Challenges
-The challenge was to determine the proportion of footwear products of both brands from their clothing counterparts without a specific product type column. Initially, I generated a keyword string to filter relevant rows from our primary DataFrame. Subsequently, I established a counter DataFrame to preserve data whose product IDs are absent from our initial subset, facilitating the differentiation between the two categories of sportswear.
 ```ruby
-# 3) Financial Performance:
-# 1) Q: How much of the company's stock consists of footwear items? 
+  def read_file(filepath, plot = True):
+    """
+    Read a CSV file from a given filepath, convert it into a pandas DataFrame,
+    and return a processed DataFrame with three columns: 'week', 'region', and 'interest'. Generate a line plot using Seaborn to visualize the data. This corresponds to the first graphic (time series) returned by trends.google.com. 
+    """
+    file = pd.read_csv(filepath, header=1) #Based upon all the csv files at hand, as our actual column names are on the second row, we're using header=1
+    df = file.set_index('Week').stack().reset_index()
+    df.columns = ['week','region','interest']
+    df['week'] = pd.to_datetime(df['week'])
+    plt.figure(figsize=(8,3))
+    df = df[df['interest']!="<1"]
+    df['interest'] = df['interest'].astype(float)
 
-# There is no column stating the type of product, so I need to rely on the "description" column
-# Challenge: pattern matching -> wildcard -> https://docs.python.org/3/library/re.html#regular-expression-syntax
-footwear_keyword = "shoe*|trainer*|foot*"
+    if plot:
+        sns.lineplot(data = df, x= 'week', y= 'interest',hue='region')
+    return df
 
-# Filter for footwear products
-shoes = merged_df[merged_df["description"].str.contains(footwear_keyword)]
+def read_geo(filepath, multi=False):
+    """
+    Read a CSV file from a given filepath, convert it into a pandas DataFrame,
+    and return a processed DataFrame with two columns: 'country' and 'interest'. Generate a bar plot using Seaborn to visualize the data. This corresponds to the second graphic returned by trends.google.com. Use multi=False if only one keyword is being analyzed, and multi=True if more than one keyword is being analyzed.
+    """
+    file = pd.read_csv(filepath, header=1)
 
-# Filter for clothing products
-# How to Filter Pandas DataFrame Using Boolean Columns https://www.statology.org/pandas-filter-by-boolean-column/
-clothing = merged_df[~merged_df.isin(shoes["product_id"])]
+    if not multi:
+        file.columns = ['country', 'interest']
+        plt.figure(figsize=(8,4))
+        colors = sns.color_palette("pastel")
+        sns.barplot(data = file.dropna().iloc[:20,:], y = 'country', x='interest', palette=colors)
+
+    if multi:
+        plt.figure(figsize=(10,14))
+        colors = sns.color_palette("pastel")
+        file = file.set_index('Country').stack().reset_index()
+        file.columns = ['country','category','interest']
+        file['interest'] = pd.to_numeric(file['interest'].apply(lambda x: x[:-1]))
+        sns.barplot(data=file.dropna(), y = 'country', x='interest', hue='category', palette=colors)
+
+    # file = file.sort_values(ascending=False,by='interest')
+    return file
 ```
 
 ## Limitations
-- The reliability of the findings and the efficacy of the proposed recommendations depend on the quality of the datasets provided.
-- Please be aware that our merged DataFrame contains aggregated sales data for each specific product.
-- Additionally, the recency of all the data remains unknown due to the absence of a datetime parameter in the datasets.
+- Quality of Datasets: The reliability of the findings and the effectiveness of proposed recommendations heavily rely on the quality and completeness of the datasets provided. Incomplete or inaccurate data could lead to biased analysis and misleading conclusions.
+- Dependency on External Tools: The analysis involves reliance on external tools such as Google Trends and Youtube Keyword Searches. Any limitations or inaccuracies in these tools could affect the accuracy of the analysis results.
 
 ## References
 - [DataCamp](https://www.datacamp.com/)
-- [Statista](https://www.statista.com/statistics/254489/total-revenue-of-the-global-sports-apparel-market/)
+
