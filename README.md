@@ -18,7 +18,9 @@ There were four fundamental datasets leveraged for this analysis:
 - geo_three_keywords.csv
 
 ## Data Preparation
-No data preparation tasks were required as all the data provided had already been cleaned out prior.
+- Found in the Datasets folder, all datasets were first inspected and then loaded into various Pandas DataFrames in the appropriate sections of the code.
+- During the inspection, various corrupt and missing aspects of the data were identified.
+- Before loading any file into DataFrames, the code was written to pre-emptively handle all problematic parts in the datasets.
 
 ## Exploratory Data Analysis
 Gain comprehensive insights into global workout demand, popular fitness keywords, regional interest splits, and preferred workout types in the Philippines and Singapore. These insights will inform strategic decisions regarding digital product offerings and market positioning for the fitness studio in Singapore.
